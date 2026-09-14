@@ -32,6 +32,26 @@
     h1 { font-size: clamp(2rem, 6vw, 3rem); margin: 0 0 0.5rem; letter-spacing: 0.02em; }
     .rule { width: 64px; height: 2px; background: currentColor; opacity: 0.4; margin: 1.25rem auto; }
     p { line-height: 1.7; font-size: 1.05rem; opacity: 0.85; }
+    .enter {
+      display: inline-block;
+      margin-top: 1.5rem;
+      padding: 0.85rem 2.25rem;
+      font-size: 1.05rem;
+      font-family: inherit;
+      letter-spacing: 0.03em;
+      text-decoration: none;
+      color: #f7f4ec;
+      background: #7a5c2e;
+      border: 1px solid #5c451f;
+      border-radius: 10px;
+      transition: background 0.2s ease, transform 0.1s ease;
+    }
+    .enter:hover { background: #8c6b38; }
+    .enter:active { transform: translateY(1px); }
+    @media (prefers-color-scheme: dark) {
+      .enter { color: #16130f; background: #d8bd86; border-color: #b89d68; }
+      .enter:hover { background: #e6cd99; }
+    }
     footer { margin-top: 2rem; font-size: 0.85rem; opacity: 0.6; }
   </style>
 </head>
@@ -40,7 +60,7 @@
     <h1>The Sacred Library Project</h1>
     <div class="rule"></div>
     <p>A gathering place for sacred texts, study, and reflection.</p>
-    <p>This site is just getting started. More to come soon.</p>
+    <a class="enter" href="https://sacredlibraryproject.duckdns.org">Enter the Library &rarr;</a>
     <footer>&copy; <span id="year"></span> Sacred Library Project</footer>
   </main>
   <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
