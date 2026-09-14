@@ -1,0 +1,4 @@
+# Never commit secrets
+token.txt
+*.token
+.env

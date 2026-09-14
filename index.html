@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sacred Library Project</title>
+  <style>
+    :root { color-scheme: light dark; }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: grid;
+      place-items: center;
+      font-family: Georgia, "Times New Roman", serif;
+      background: #f7f4ec;
+      color: #2b2620;
+      padding: 2rem;
+    }
+    @media (prefers-color-scheme: dark) {
+      body { background: #16130f; color: #ece5d8; }
+      .card { background: rgba(255,255,255,0.03); border-color: rgba(255,255,255,0.08); }
+    }
+    .card {
+      max-width: 640px;
+      text-align: center;
+      padding: 3rem 2.5rem;
+      border: 1px solid rgba(0,0,0,0.08);
+      border-radius: 16px;
+      background: rgba(255,255,255,0.5);
+    }
+    h1 { font-size: clamp(2rem, 6vw, 3rem); margin: 0 0 0.5rem; letter-spacing: 0.02em; }
+    .rule { width: 64px; height: 2px; background: currentColor; opacity: 0.4; margin: 1.25rem auto; }
+    p { line-height: 1.7; font-size: 1.05rem; opacity: 0.85; }
+    footer { margin-top: 2rem; font-size: 0.85rem; opacity: 0.6; }
+  </style>
+</head>
+<body>
+  <main class="card">
+    <h1>The Sacred Library Project</h1>
+    <div class="rule"></div>
+    <p>A gathering place for sacred texts, study, and reflection.</p>
+    <p>This site is just getting started. More to come soon.</p>
+    <footer>&copy; <span id="year"></span> Sacred Library Project</footer>
+  </main>
+  <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+</body>
+</html>
