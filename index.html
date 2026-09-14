@@ -52,6 +52,28 @@
       .enter { color: #16130f; background: #d8bd86; border-color: #b89d68; }
       .enter:hover { background: #e6cd99; }
     }
+    .alts { margin-top: 1.75rem; }
+    .alt-note { font-size: 0.85rem; opacity: 0.7; margin: 0 0 0.75rem; }
+    .alt {
+      display: inline-block;
+      margin: 0.3rem 0.35rem 0;
+      padding: 0.5rem 1.25rem;
+      font-size: 0.92rem;
+      font-family: inherit;
+      letter-spacing: 0.02em;
+      text-decoration: none;
+      color: #7a5c2e;
+      background: transparent;
+      border: 1px solid #b89d68;
+      border-radius: 8px;
+      transition: background 0.2s ease, transform 0.1s ease;
+    }
+    .alt:hover { background: rgba(122, 92, 46, 0.1); }
+    .alt:active { transform: translateY(1px); }
+    @media (prefers-color-scheme: dark) {
+      .alt { color: #d8bd86; border-color: #6b5a38; }
+      .alt:hover { background: rgba(216, 189, 134, 0.12); }
+    }
     footer { margin-top: 2rem; font-size: 0.85rem; opacity: 0.6; }
   </style>
 </head>
@@ -61,6 +83,11 @@
     <div class="rule"></div>
     <p>A gathering place for sacred texts, study, and reflection.</p>
     <a class="enter" href="https://sacredlibraryproject.duckdns.org">Enter the Library &rarr;</a>
+    <div class="alts">
+      <p class="alt-note">Alternate entrances (your browser may warn about the certificate &mdash; that&rsquo;s expected on these; choose &ldquo;proceed&rdquo;):</p>
+      <a class="alt" href="https://ec2-3-143-78-100.us-east-2.compute.amazonaws.com">Via AWS hostname &rarr;</a>
+      <a class="alt" href="https://3.143.78.100">Via IP address &rarr;</a>
+    </div>
     <footer>&copy; <span id="year"></span> Sacred Library Project</footer>
   </main>
   <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
